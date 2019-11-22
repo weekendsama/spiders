@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/86sdscomspider/images" />
+      <excludeFolder url="file://$MODULE_DIR$/meituricom/pics" />
+      <excludeFolder url="file://$MODULE_DIR$/meituricom_jigou/images" />
+      <excludeFolder url="file://$MODULE_DIR$/newvenv" />
+      <excludeFolder url="file://$MODULE_DIR$/plmmcomspider/images" />
+      <excludeFolder url="file://$MODULE_DIR$/quanshuwangcom_novel_spider/novels" />
+    </content>
+    <orderEntry type="jdk" jdkName="Python 3.7 (spiders) (2)" jdkType="Python SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="TestRunnerService">
+    <option name="PROJECT_TEST_RUNNER" value="Unittests" />
+  </component>
+</module>
