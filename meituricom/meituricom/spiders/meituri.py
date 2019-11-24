@@ -14,9 +14,9 @@ class MeituriSpider(CrawlSpider):
     )
 
     def parse_item(self, response):
-        cate = response.xpath('//div[@class="fenlei"]/h1/text()').extract_first()
-        names = response.xpath('//p[@class="biaoti"]/a/text()').extract()
-        urls = response.xpath('//p[@class="biaoti"]/a/@href').extract()
+        cate = response.xpath('//div[@class="fenlei"]/h1/text()').get()
+        names = response.xpath('//p[@class="biaoti"]/a/text()').getall()
+        urls = response.xpath('//p[@class="biaoti"]/a/@href').getall()
         for name, url in zip(names, urls):
             if any(each in cate for each in ['The Black Alley', 'IESS', 'RQ-STAR']):
                 continue
@@ -27,8 +27,8 @@ class MeituriSpider(CrawlSpider):
 
     def parse_detial(self, response):
         item = response.meta['item']
-        downloads = response.xpath('//div[@class="content"]/img/@src').extract()
-        next_page = response.xpath('//div[@id="pages"]/a[last()]/@href').extract_first()
+        downloads = response.xpath('//div[@class="content"]/img/@src').getall()
+        next_page = response.xpath('//div[@id="pages"]/a[last()]/@href').get()
         item['download_url'] = downloads
         yield item
         if next_page != response.url or not next_page:
