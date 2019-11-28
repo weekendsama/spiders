@@ -17,7 +17,7 @@ class MeituricomPipeline(ImagesPipeline):
     def file_path(self, request, response=None, info=None):
         item = request.meta['item']
         catename = item['catename']
-        folder_name = item['name'].replace(r'/', '')
+        folder_name = item['name'].replace(r'/', '').rstrip()
         img_guid = request.url.split('/')[-1]
         img_name = img_guid
         filename = u'{0}/{1}/{2}'.format(catename, folder_name, img_name)

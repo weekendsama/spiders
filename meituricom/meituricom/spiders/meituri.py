@@ -18,7 +18,7 @@ class MeituriSpider(CrawlSpider):
         names = response.xpath('//p[@class="biaoti"]/a/text()').getall()
         urls = response.xpath('//p[@class="biaoti"]/a/@href').getall()
         for name, url in zip(names, urls):
-            if any(each in cate for each in ['The Black Alley', 'IESS', 'RQ-STAR']):
+            if any(each in cate for each in ['The Black Alley', 'IESS', 'RQ-STAR', '日本DGC', 'For-side', 'X-City', 'NS Eyes', 'Image.tv', 'Minisuka.tv', 'Bomb.TV', '4K-STAR', 'Imuto.tv', 'Sabra.net', 'Digi-Gra', 'LovePop', 'Bejean On Line', 'Graphis', 'Princess Collection', 'Hello! Project Digital', 'YS Web']):
                 continue
             item = MeituricomItem()
             item['name'] = name
@@ -31,5 +31,5 @@ class MeituriSpider(CrawlSpider):
         next_page = response.xpath('//div[@id="pages"]/a[last()]/@href').get()
         item['download_url'] = downloads
         yield item
-        if next_page != response.url or not next_page:
+        if next_page != response.url and next_page:
             yield scrapy.Request(next_page, callback=self.parse_detial, meta={'item': response.meta['item']})

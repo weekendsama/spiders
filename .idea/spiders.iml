@@ -3,6 +3,7 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/86sdscomspider/images" />
+      <excludeFolder url="file://$MODULE_DIR$/meituricom/JOB_INFO" />
       <excludeFolder url="file://$MODULE_DIR$/meituricom/pics" />
       <excludeFolder url="file://$MODULE_DIR$/meituricom_jigou/images" />
       <excludeFolder url="file://$MODULE_DIR$/newvenv" />
