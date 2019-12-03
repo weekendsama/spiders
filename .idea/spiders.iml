@@ -11,6 +11,10 @@
       <excludeFolder url="file://$MODULE_DIR$/newvenv" />
       <excludeFolder url="file://$MODULE_DIR$/plmmcomspider/images" />
       <excludeFolder url="file://$MODULE_DIR$/quanshuwangcom_novel_spider/novels" />
+      <excludeFolder url="file://$MODULE_DIR$/xiurenorg/JOB_INFO" />
+      <excludeFolder url="file://$MODULE_DIR$/xiurenorg/pics" />
+      <excludeFolder url="file://$MODULE_DIR$/xsnvshencom/JOB_INFO" />
+      <excludeFolder url="file://$MODULE_DIR$/xsnvshencom/pics" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.7 (spiders) (2)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
