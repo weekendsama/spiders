@@ -7,6 +7,7 @@
 import codecs
 import json
 
+
 class XgmnorgPipeline(object):
     def __init__(self):
         self.file = codecs.open(filename='info.csv', mode='w+', encoding='utf-8')
